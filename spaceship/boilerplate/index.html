@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>BoilerPlate</title>
+    <title>SpaceShip Boilerplate</title>
+    <link rel="stylesheet" href = "css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+  </head>
+
+
+  <body>
+    <div>
+      
+      boilerplate
+
+    </div>
+    <div>
+
+    <button id="btn-login">Moralis Metamask Login</button>
+    <button id="btn-logout">Logout</button>
+    <button id="btn-launch">Launch</button>
+    <button id="btn-refresh">Refresh</button>
+    <button id="btn1" onclick="setCanvas(400,300);setGameScale(1.5)">400x300</button>
+    <button id="btn2" onclick="setCanvas(640,360);setGameScale(2)">640x360</button>
+    <button id="btn3" onclick="setCanvas(800,600);setGameScale(2.5)">800x600</button>
+    <button id="btn4" onclick="setCanvas(896,414);setGameScale(2.5)">896x414</button>
+    <button id="btn5" onclick="setCanvas(1366,768);setGameScale(3)">1366x768</button>
+    <button id="btn6" onclick="setCanvas(1536,864);setGameScale(3)">1536x864</button>
+    <button id="btn7" onclick="setCanvas(1920,1280);setGameScale(4)">1920x1280</button>
+    <button id="btn8" onclick="setCanvas(2224,1668);setGameScale(5)">2224x1668</button>
+    <button id="btn9" onclick="setCanvas(2732,2048);setGameScale(5)">2732x2048</button>
+
+    <button id="scale1" onclick="setGameScale(1.5)">scale1</button>
+    <button id="scale2" onclick="setGameScale(2)">scale2</button>
+    <button id="scale3" onclick="setGameScale(3)">scale3</button>
+    <button id="scale4" onclick="setGameScale(4)">scale4</button>
+    <button id="scale5" onclick="setGameScale(5)">scale5</button>
+    <button id="scale6" onclick="setGameScale(6)">scale6</button>
+    <button id="scale8" onclick="setGameScale(8)">scale8</button>
+    <button id="scale12" onclick="setGameScale(12)">scale12</button>
+
+
+    <button id="transfer" onclick="transferTokens(5)">transfer5</button>
+    <button id="transfer" onclick="transferTokens(10)">transfer10</button>
+    <button id="transfer" onclick="transferTokens(25)">transfer25</button>
+
+
+
+<table style="width:100%">
+  <tr>
+    <td style= "width:10%">    
+      <h2>wallet:</h2>
+      <h2>scale:</h2>
+    </td>
+    <td style= "width:50%">
+      <div id="wallet" class="wallet">none</div>
+     </h2><div id="gameScale" class="wallet">2</div>
+    </td>
+    <td style= "width:5%">    
+    </td>
+    <td style= "width:10%">    
+      <h2>symbol:</h2>
+      <h2>balance:</h2>
+      <h2>credits:</h2>
+    </td>
+    <td style= "width:35%">
+      <div id="tokenSymbol" class="wallet">-</div>
+      <div id="tokenBalance" class="wallet">-</div>
+      <div id="Credits" class="wallet">-</div>
+  </td>
+  </tr>
+</table>
+ 
+
+
+
+
+<div id="stage">
+  <canvas id="background-layer" width="896" height="414"></canvas>
+  <canvas id="game-layer" width="896" height="414"></canvas>
+  <canvas id="ui-layer" width="896" height="414"></canvas>
+</div>
+    <hr />
+    <div id="infoLine" class="infoLine">infoLine</div>
+    <hr />
+
+    <div id="statusLine">statusLine10/div>
+    <script type="text/javascript" src="game.js"></script>
+</div>
+  </body>
+</html>
+
+<script>
+
+function setGameScale(_scale) {
+     document.getElementById("gameScale").innerHTML = _scale;
+}
+
+
+function setCanvas(width, height) {
+  var canvas = document.getElementById("background-layer");  
+  canvas.width = width;
+  canvas.height = height;
+
+  canvas = document.getElementById("game-layer");  
+  canvas.width = width;
+  canvas.height = height;
+
+  canvas = document.getElementById("ui-layer");  
+  canvas.width = width;
+  canvas.height = height;
+
+
+  console.log(width,height)
+}
+
+/*
+var config = {
+//    type: Panaderpo.AUTO,
+    width: 800,
+    height: 600,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 300 },
+            debug: false
+        }
+    },
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
+    }
+};
+*/
+
+</script>
