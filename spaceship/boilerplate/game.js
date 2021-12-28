@@ -28,7 +28,7 @@ var user = Moralis.User.current();
 var tokenBalance = 0;
 var Credits = 0;
 var tokenSymbol = '-';
-var callName = '- -';
+var Callname = '- -';
 var gameOn = 0; /// game has started
 var gameScale = 2; /// assets, sprites, 
 var gameVelocity = 1; /// default speed- multiplier..for small screens * 0.5 .. large screens * 1.5
@@ -47,7 +47,7 @@ async function initGame() {
     document.getElementById("wallet").innerHTML = user.get('ethAddress'); 
     await retrieveTokenBalance();
     Credits = await retrieveCredits();
-    callName = user.get('ethAddress').substr(-4);
+    Callname = user.get('ethAddress').substr(-4);
     console.log(user);
   }
 }
@@ -79,7 +79,7 @@ async function clearVariables() {
   tokenBalance = 0;
   Credits = 0 ;
   tokenSymbol = 0;
-  callName = "- -";
+  Callname = "- -";
   document.getElementById("wallet").innerHTML = 'none';
   document.getElementById("tokenBalance").innerHTML = tokenBalance;
   document.getElementById("tokenSymbol").innerHTML = tokenSymbol ;
@@ -691,7 +691,7 @@ class Ship {
       ctx.textAlign = "left";
       ctx.fillStyle = "#eee";
       ctx.fillText("Luis", 20, -15);
-      ctx.fillText(callName, 20, -0);
+      ctx.fillText(Callname, 20, -0);
   }
 
   /// @notice class spaceShip.draw
