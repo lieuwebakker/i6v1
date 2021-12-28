@@ -1,0 +1,12 @@
+.env
+spaceship/pixi-rollup/node_modules
+spaceship/pixi-rollup/assets/assets
+spaceship/pixi-rollup/assets/SpaceshipCreationKit
+spaceship/pixi-rollup/package-lock.json
+spaceship/pixi-rollup/.gitignore
+
+spaceship/boilerplate/pixjs.js
+spaceship/boilerplate/assets/SpaceshipCreationKit/
+spaceship/boilerplate/assets/assets/
+.DS_Store
+spaceship/boilerplate/.DS_Store
