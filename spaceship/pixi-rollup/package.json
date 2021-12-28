@@ -1,8 +1,8 @@
 {
-  "name": "pixi-rollup-example",
+  "name": "spaceship-pixi",
   "version": "1.0.0",
   "private": true,
-  "description": "Minimum usage with PixiJS and Rollup",
+  "description": "Tiny game Spaceship alternative, minimum usage with PixiJS and Rollup",
   "main": "index.js",
   "scripts": {
     "build": "rollup -c --environment BUILD:production",
