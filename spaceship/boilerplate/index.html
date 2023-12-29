@@ -12,9 +12,7 @@
 
   <body>
     <div>
-      
       boilerplate
-
     </div>
     <div>
 
@@ -41,53 +39,47 @@
     <button id="scale8" onclick="setGameScale(8)">scale8</button>
     <button id="scale12" onclick="setGameScale(12)">scale12</button>
 
-
     <button id="transfer" onclick="transferTokens(5)">transfer5</button>
     <button id="transfer" onclick="transferTokens(10)">transfer10</button>
     <button id="transfer" onclick="transferTokens(25)">transfer25</button>
 
-
-
-<table style="width:100%">
-  <tr>
-    <td style= "width:10%">    
-      <h2>wallet:</h2>
-      <h2>scale:</h2>
+  <table style="width:100%">
+    <tr>
+      <td style= "width:10%">    
+        <h2>wallet:</h2>
+        <h2>scale:</h2>
+      </td>
+      <td style= "width:50%">
+        <div id="wallet" class="wallet">none</div>
+       </h2><div id="gameScale" class="wallet">2</div>
+      </td>
+      <td style= "width:5%">    
+      </td>
+      <td style= "width:10%">    
+        <h2>symbol:</h2>
+        <h2>balance:</h2>
+        <h2>credits:</h2>
+      </td>
+      <td style= "width:35%">
+        <div id="tokenSymbol" class="wallet">-</div>
+        <div id="tokenBalance" class="wallet">-</div>
+        <div id="Credits" class="wallet">-</div>
     </td>
-    <td style= "width:50%">
-      <div id="wallet" class="wallet">none</div>
-     </h2><div id="gameScale" class="wallet">2</div>
-    </td>
-    <td style= "width:5%">    
-    </td>
-    <td style= "width:10%">    
-      <h2>symbol:</h2>
-      <h2>balance:</h2>
-      <h2>credits:</h2>
-    </td>
-    <td style= "width:35%">
-      <div id="tokenSymbol" class="wallet">-</div>
-      <div id="tokenBalance" class="wallet">-</div>
-      <div id="Credits" class="wallet">-</div>
-  </td>
-  </tr>
-</table>
+    </tr>
+  </table>
  
+  <div id="stage">
+    <canvas id="background-layer" width="896" height="414"></canvas>
+    <canvas id="game-layer" width="896" height="414"></canvas>
+    <canvas id="ui-layer" width="896" height="414"></canvas>
+  </div>
 
-
-
-
-<div id="stage">
-  <canvas id="background-layer" width="896" height="414"></canvas>
-  <canvas id="game-layer" width="896" height="414"></canvas>
-  <canvas id="ui-layer" width="896" height="414"></canvas>
-</div>
     <hr />
     <div id="infoLine" class="infoLine">infoLine</div>
     <hr />
 
     <div id="statusLine">statusLine10/div>
-    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="gameNew.js"></script>
 </div>
   </body>
 </html>
@@ -97,7 +89,6 @@
 function setGameScale(_scale) {
      document.getElementById("gameScale").innerHTML = _scale;
 }
-
 
 function setCanvas(width, height) {
   var canvas = document.getElementById("background-layer");  
@@ -111,7 +102,6 @@ function setCanvas(width, height) {
   canvas = document.getElementById("ui-layer");  
   canvas.width = width;
   canvas.height = height;
-
 
   console.log(width,height)
 }
